@@ -1,10 +1,10 @@
 all : ppmModification.out
 
-ppmModification.out : ppmModification.c biblio.o
-	gcc -Wall -o ppmModification.out ppmModification.c biblio.o
+ppmModification.out : ppmModification.cpp biblio.o
+	g++ -Wall -o ppmModification.out ppmModification.cpp biblio.o
 
-biblio.o : biblio.h biblio.c
-	gcc -Wall -o biblio.o biblio.c -c
+biblio.o : biblio.h biblio.cpp
+	g++ -Wall -o biblio.o biblio.cpp -c
 
 clean:
 	rm *.o
