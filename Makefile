@@ -1,12 +1,13 @@
 all : ppmModification.out
 
-ppmModification.out : ppmModification.cpp biblio.o
-	g++ -Wall -o ppmModification.out ppmModification.cpp biblio.o
+ppmModification.out : ppmModification.cpp Image.o
+	g++ -Wall -o ppmModification.out ppmModification.cpp Image.o
 
-biblio.o : biblio.h biblio.cpp
-	g++ -Wall -o biblio.o biblio.cpp -c
+biblio.o : Image.h Image.cpp
+	g++ -Wall -o Image.o Image.cpp -c
 
 clean:
 	rm *.o
 mrproper: clean
 	rm ppmModification.out
+
