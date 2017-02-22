@@ -17,14 +17,14 @@ g++ -std=c++11 -O3 mpileup2readcounts.cc -o mpileup2readcounts
 samtools mpileup -f ref.fa -l regions.bed BAM/*.bam | sed 's/		/	* 	*/g' | mpileup2readcounts 0 -5 false
 ```
 Samtools arguments :
-1. FASTA file
-2. bed file
-3. BAM files : several samples can be parsed
+- FASTA file
+- bed file
+- BAM files : several samples can be parsed
 
 Three options for mpileup2readcounts :
-1. 0 to parse all sample otherwise specify the number of the sample (for example 1 for the first sample)
-2. BQcut : base quality score cutoff for each mapped/unmapped base, only those larger than cutoff will be output in the result, to use no filter set BQcut to -5
-3. true to ignore indels 
+- 0 to parse all sample otherwise specify the number of the sample (for example 1 for the first sample)
+- BQcut : base quality score cutoff for each mapped/unmapped base, only those larger than cutoff will be output in the result, to use no filter set BQcut to -5
+- true to ignore indels 
 
 ##Example output
 ```
@@ -34,15 +34,14 @@ Three options for mpileup2readcounts :
 | 17	| 7579643	| C	| 48	| 0	| 0	| 9	| 0	| 0	| 0	| 39	| 0	| NA	| 4:ccccagccctccaggt|2:CCCCAGCCCTCCAGGT	| 9	| 0	| 0	| 6	| 0	| 0	| 0	| 3	| 0	| NA	| NA|
 ```
 
-Content of each line :
-	Common informations for all samples: 
-		-chromosome
-		-position on the chromosome
-		-reference base
-	For each sample :
-		-depth
-		-ATcg/atcg count
-		-insertions 
-		-deletions : in the example, there are 6 deletions found at position 7579643 for the first sample, 2 on the forward strand and 4 on the reverse strand
-
+### Content of each line 
+Common informations for all samples: 
+- chromosome
+- position on the chromosome
+- reference base
+For each sample :
+- depth
+- ATcg/atcg count
+- insertions 
+- deletions : in the example, there are 6 deletions found at position 7579643 for the first sample, 2 on the forward strand and 4 on the reverse strand
 
