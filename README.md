@@ -42,7 +42,7 @@ Common informations for all samples:
 
 For each sample :
 - depth
-- ATcg/atcg count
+- ATCG/atcg count
 - insertions 
 - deletions : in the example, there are 6 deletions found at position 7579643 for the first sample, 2 on the forward strand and 4 on the reverse strand
 
