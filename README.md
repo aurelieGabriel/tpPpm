@@ -27,12 +27,12 @@ Three options for mpileup2readcounts :
 - true to ignore indels 
 
 ##Example output
-```
+
 | chr |	loc	| ref	| depth	| A	| T	| C	| G	| a	| t	| c	| g	| Insertion	| Deletion	| depth	| A	| T	| C	| G	| a	| t	| c	| g	| Insertion	| Deletion	|
 | 17 | 7572814	| C	| 25	| 0	| 0	| 23	| 0	| 0	| 0	| 2	| 0	| NA	| NA	| 8	| 0	| 0	| 8	| 0	| 0	| 0	| 0	| 0	| NA |	NA |
 | 17	| 7572817	| C	| 28	| 0	| 0	| 26	| 0	| 0	| 0	| 2	| 0	| NA	| NA	| 8	| 0	| 0	| 8	| 0	| 0	| 0	| 0	| 0	| NA	| NA|
 | 17	| 7579643	| C	| 48	| 0	| 0	| 9	| 0	| 0	| 0	| 39	| 0	| NA	| 4:ccccagccctccaggt|2:CCCCAGCCCTCCAGGT	| 9	| 0	| 0	| 6	| 0	| 0	| 0	| 3	| 0	| NA	| NA|
-```
+
 
 ### Content of each line 
 Common informations for all samples: 
