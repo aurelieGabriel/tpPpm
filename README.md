@@ -39,6 +39,7 @@ Common informations for all samples:
 - chromosome
 - position on the chromosome
 - reference base
+
 For each sample :
 - depth
 - ATcg/atcg count
